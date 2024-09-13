@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=QnKNoh3V"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Diversão e Adivinhação</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container__conteudo" id="conteudo-jogo">
+            <div class="container__imagem">
+                <img src="img/tigrinhoo.webp" alt="Tigrinho" class="imagem-tigrinho">
+            </div>
+            <div class="container__informacoes">
+                <div class="container__texto">
+                    <h1>Aposte qual seu número secreto</h1>
+                    <p class="texto__paragrafo">Tente sua sorte e aposte um número entre 1 e 10</p>
+                </div>
+                <input type="number" min="1" max="10" class="container__input" placeholder="Sua sorte estará aqui?">
+                <div class="chute container__botoes">
+                    <button onclick="verificarChute()" class="container__botao">Aposte</button>
+                    <button onclick="reiniciarJogo()" id="reiniciar" class="container__botao" disabled>Vamos denovo</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tigrinho com raiva e mensagem adicional -->
+        <div class="container__tigrinho-raiva" id="tigrinho-raiva" style="display: none;">
+            <img src="img/tigrinho_raiva.JPG" alt="Tigrinho com raiva" class="imagem-tigrinho-raiva-grande">
+            <p class="texto__raiva-grande" id="mensagem-vitoria"></p>
+            <button onclick="reiniciarJogo()" id="botao-reiniciar-raiva" class="container__botao">Vamos denovo</button>
+        </div>
+
+        <!-- Tigrinho triste para acerto em 1 tentativa -->
+        <div class="container__tigrinho-triste" id="tigrinho-triste" style="display: none;">
+            <img src="img/tigrinho_triste.JPG" alt="Tigrinho triste" class="imagem-tigrinho-triste-grande">
+            <p class="texto__triste-grande" id="mensagem-triste"></p>
+            <button onclick="reiniciarJogo()" id="botao-reiniciar-triste" class="container__botao">Vamos denovo</button>
+        </div>
+    </div>
+    <div id="tigrinho-raiva" style="display: none;">
+        <img src="img/tigrinho-raiva.JPG" alt="Tigrinho com Raiva">
+        <p id="mensagem-vitoria">Suas tentativas acabaram, deposita mais 200.</p>
+    </div>
+
+    <div id="tigrinho-triste" style="display: none;">
+        <img src="img/tigrinho-triste.webp" alt="Tigrinho Triste">
+        <p id="mensagem-triste"></p>
+    </div>
+</div>
+
+
+</body>
+<script src="main.js" defer></script>
+
+</html>
+
